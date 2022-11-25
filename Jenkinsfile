@@ -15,7 +15,7 @@ pipeline {
         stage('clean') {
         			steps {
             			dir('projects/erphrense'){
-			                sh 'chmod u+x mvnw'
+			                sh 'chmod u+x ./mvn'
 			                sh 'mvnw clean'
 			           
 			            }
