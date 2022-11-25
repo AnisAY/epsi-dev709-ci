@@ -15,8 +15,8 @@ pipeline {
         stage('clean') {
         			steps {
             			dir('projects/erphrense'){
-			                sh 'chmod u+x ./mvnw'
-			                sh './mvnw clean'
+			                sh 'chmod u+x mvnw'
+			                sh 'mvnw clean'
 			           
 			            }
             		}	        
@@ -24,24 +24,24 @@ pipeline {
         stage('compile') {
 			steps {
     			dir('projects/erphrense'){
-	                sh 'chmod u+x ./mvnw'
-	                sh './mvnw compile'
+	                sh 'chmod u+x mvnw'
+	                sh 'mvnw compile'
 	            }
     		}
     		}
         stage('test') {
 			steps {
     			dir('projects/erphrense'){
-	                sh 'chmod u+x ./mvnw'
-	                sh './mvnw test'
+	                sh 'chmod u+x mvnw'
+	                sh 'mvnw test'
 	            }
     		}	        
         }
         stage('package') {
     			steps {
         			dir('projects/erphrense'){
-		                sh 'chmod u+x ./mvnw'
-		  				sh './mvnw package'
+		                sh 'chmod u+x mvnw'
+		  				sh 'mvnw package'
 		            }
         		}
         }	
