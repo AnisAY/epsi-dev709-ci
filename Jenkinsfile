@@ -7,7 +7,7 @@ pipeline {
     stages{
         stage('checkout') { 
             steps {
-                git branch:'main',url:'https://github.com/xonatis-academy/epsi-dev709-ci.git'
+                git branch:'main',url:'https://github.com/AnisAY/epsi-dev709-ci.git'
                 }
             
 
