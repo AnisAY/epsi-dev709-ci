@@ -14,11 +14,10 @@ pipeline {
         }
         stage('clean') {
         			steps {
-            			dir('projects/erphrense'){
 			                sh 'chmod u+x ./mvnw'
 			                sh 'mvnw clean'
 			           
-			            }
+			            
             		}	        
         }
         stage('compile') {
