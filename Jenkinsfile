@@ -44,7 +44,7 @@ pipeline {
         stage('archive') {
     			steps {
         			
-		            	sh 'mv projects/erphrense/target/erphrense-0.0.1-SNAPSHOT.jar erphrense-$BUILD_NUMBER.jar'
+		            	sh 'mv target/erphrense-0.0.1-SNAPSHOT.jar erphrense-$BUILD_NUMBER.jar'
 		  				archiveArtifacts artifacts: 'erphrense-*.jar', followSymlinks: false
 
         		}        
